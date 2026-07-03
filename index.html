@@ -6,207 +6,126 @@
 
     <title>Um Convite Especial 💙</title>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- Partículas -->
-    <div id="particles-container"></div>
+<div id="particles-container"></div>
 
-    <!-- Flores decorativas -->
-    <div class="flower flower-1">❀</div>
-    <div class="flower flower-2">✿</div>
-    <div class="flower flower-3">❀</div>
+<div class="flower flower-1">❀</div>
+<div class="flower flower-2">✿</div>
+<div class="flower flower-3">❀</div>
 
-    <!-- Tela Inicial -->
-    <section class="hero-screen" id="heroScreen">
+<!-- HERO -->
+<section class="hero-screen" id="heroScreen">
 
-        <div class="glass-card hero-card">
+    <div class="glass-card hero-card">
 
-            <div class="heart-floating">💙</div>
+        <div class="heart-floating">💙</div>
 
-            <h1 class="main-title">
-                Tenho algo especial para você...
-            </h1>
+        <h1 class="main-title">Tenho algo especial para você...</h1>
 
-            <p class="subtitle">
-                Clique no envelope para descobrir.
-            </p>
+        <p class="subtitle">Clique no envelope para descobrir.</p>
 
-            <!-- Envelope -->
-            <div class="envelope-wrapper">
-
-                <div class="envelope" id="envelope">
-
-                    <div class="envelope-back"></div>
-
-                    <div class="envelope-letter-preview">
-                        ✉
-                    </div>
-
-                    <div class="envelope-flap"></div>
-
-                </div>
-
+        <div class="envelope-wrapper">
+            <div class="envelope" id="envelope">
+                <div class="envelope-back"></div>
+                <div class="envelope-letter-preview">✉</div>
+                <div class="envelope-flap"></div>
             </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CARTA -->
+<section class="letter-section hidden" id="letterSection">
+
+    <div class="glass-card letter-card">
+
+        <h2 class="letter-title">Meu Amor 💙</h2>
+
+        <div class="typewriter-container">
+            <p id="typewriterText"></p>
+        </div>
+
+        <button id="continueBtn" class="elegant-btn hidden">
+            Continuar
+        </button>
+
+    </div>
+
+</section>
+
+<!-- CONVITE -->
+<section class="invitation-section hidden" id="invitationSection">
+
+    <div class="glass-card invitation-card">
+
+        <h2 class="invitation-title">Gostaria de sair comigo?</h2>
+
+        <p class="invitation-subtitle">
+            Para comemorarmos nosso primeiro ano de namoro
+        </p>
+
+        <div class="date-card">
+            <span class="date-label">Data Especial</span>
+            <h3>04 de Julho de 2026</h3>
+            <p>Porque no dia 05 não poderemos sair.</p>
+        </div>
+
+        <div id="funnyMessage" class="funny-message"></div>
+
+        <div class="buttons-area">
+
+            <button id="yesBtn" class="yes-btn">Sim!</button>
+            <button id="noBtn" class="no-btn">Não ;-;</button>
 
         </div>
 
-    </section>
+    </div>
 
-    <!-- Carta -->
-    <section class="letter-section hidden" id="letterSection">
+</section>
 
-        <div class="glass-card letter-card">
+<!-- TELA BRINCADEIRINHA -->
+<section id="fakeRejectScreen" class="fake-reject-screen">
 
-            <h2 class="letter-title">
-                Meu Amor 💙
-            </h2>
+    <div class="fake-reject-content">
 
-            <div class="typewriter-container">
+        <h2>Brincadeirinha</h2>
 
-                <p id="typewriterText"></p>
+        <p>Negar esse convite é proibido pela constituição do namoro.</p>
 
-            </div>
+        <button id="backBtn" class="yes-btn">Voltar 💙</button>
 
-            <button id="continueBtn" class="elegant-btn hidden">
-                Continuar
-            </button>
+    </div>
 
-        </div>
+</section>
 
-    </section>
+<!-- FINAL -->
+<section class="final-section hidden" id="finalSection">
 
-    <!-- Convite -->
-    <section class="invitation-section hidden" id="invitationSection">
+    <div class="glass-card final-card">
 
-        <div class="glass-card invitation-card">
+        <div class="success-heart">💙</div>
 
-            <h2 class="invitation-title">
-                Gostaria de sair comigo?
-            </h2>
+        <h2>Eu sabia!</h2>
 
-            <p class="invitation-subtitle">
-                Para comemorarmos nosso primeiro ano de namoro 
-            </p>
+        <p>Obrigada por aceitar</p>
 
-            <div class="date-card">
+    </div>
 
-                <span class="date-label">Data Especial</span>
+</section>
 
-                <h3>04 de Julho de 2026</h3>
+<div id="heartsContainer"></div>
 
-                <p>
-                    Porque no dia 05 não poderemos sair,
-                    mas eu não deixaria essa data passar em branco.
-                </p>
-
-            </div>
-
-            <div id="funnyMessage" class="funny-message"></div>
-            
-            <div class="buttons-area">
-            
-                <button id="yesBtn" class="yes-btn">
-                    Sim! 
-                </button>
-            
-                <button id="noBtn" class="no-btn">
-                    Não;-;
-                </button>
-            
-            </div>
-
-    </section>
-
-    <!-- Carta Final -->
-    <section class="final-section hidden" id="finalSection">
-
-        <div class="glass-card final-card">
-
-            <div class="success-heart">
-                💙
-            </div>
-
-            <h2>
-                Eu sabia! 
-            </h2>
-
-            <p>
-                Obrigado por escolher viver mais um capítulo
-                dessa nossa história.
-            </p>
-
-            <div class="final-letter">
-
-                <p>
-                    Um ano atrás eu ganhei a melhor companhia
-                    que poderia desejar.
-                </p>
-
-                <p>
-                    Obrigada por cada conversa,
-                    cada risada,
-                    cada abraço,
-                    cada momento que transformou dias comuns
-                    em lembranças especiais.
-                </p>
-
-                <p>
-                    Que esse seja apenas o primeiro de muitos anos.
-                </p>
-
-                <p class="signature">
-                    Com todo meu amor 💙
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Tela da brincadeira -->
-    <section id="fakeRejectScreen" class="fake-reject-screen hidden">
-    
-        <div class="fake-reject-content">
-    
-            <h2>
-                Brincadeirinha
-            </h2>
-    
-            <p>
-                Negar esse convite é proibido pela constituição do namoro.
-            </p>
-    
-            <button id="backBtn" class="yes-btn">
-                Voltar
-            </button>
-    
-        </div>
-    
-    </section>
-    
-    <!-- Chuva de corações -->
-    <div id="heartsContainer"></div>
-
-    <!-- Cursor fake do Sim -->
-    <div id="cursorShield"></div>
-
-    <!-- Áudio opcional -->
-    <audio id="backgroundMusic" loop>
-        <source src="" type="audio/mpeg">
-    </audio>
-
-    <!-- JS -->
-    <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
