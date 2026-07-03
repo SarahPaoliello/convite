@@ -817,3 +817,66 @@ button{
     overflow:hidden;
 
 }
+/* ======================================================
+   TELA BRINCADEIRINHA
+====================================================== */
+
+.fake-reject-screen{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#000;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    transition:opacity 1.3s ease;
+
+    z-index:9999;
+
+}
+
+.fake-reject-screen.show{
+
+    opacity:1;
+
+}
+
+.fake-reject-content{
+
+    text-align:center;
+
+    color:white;
+
+    max-width:600px;
+
+    padding:30px;
+
+}
+
+.fake-reject-content h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:3rem;
+
+    margin-bottom:25px;
+
+}
+
+.fake-reject-content p{
+
+    font-size:1.2rem;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+}
