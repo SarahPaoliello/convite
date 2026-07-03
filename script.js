@@ -22,7 +22,8 @@ const particlesContainer = document.getElementById("particles-container");
 
 const heartsContainer = document.getElementById("heartsContainer");
 
-
+const fakeRejectScreen = document.getElementById("fakeRejectScreen");
+const backBtn = document.getElementById("backBtn");
 /* =====================================================
    TEXTO DA CARTA
 ===================================================== */
@@ -279,7 +280,7 @@ function escapeNoButton() {
 
         noUnlocked = true;
 
-        funnyMessage.textContent = "Tá bom... você venceu 😂";
+        funnyMessage.textContent = "Tá bom... você venceu";
 
         noBtn.style.position = "relative";
         noBtn.style.left = "0";
@@ -305,24 +306,39 @@ noBtn.addEventListener("touchstart", (e) => {
 
 noBtn.addEventListener("click", () => {
 
-    document.body.style.transition = "1.2s";
-
+    document.body.style.transition = "opacity 1.2s";
     document.body.style.opacity = "0";
 
     setTimeout(() => {
 
-        alert("Brincadeirinha, negar esse convite é proibido pela constituição do namoro");
+        fakeRejectScreen.classList.remove("hidden");
 
-        document.body.style.opacity = "1";
-
-        noBtn.style.display = "none";
-
-        funnyMessage.textContent = "Agora só resta uma opção... 💙";
+        requestAnimationFrame(() => {
+            fakeRejectScreen.classList.add("show");
+        });
 
     },1200);
 
 });
 
+backBtn.addEventListener("click", () => {
+
+    fakeRejectScreen.classList.remove("show");
+
+    setTimeout(() => {
+
+        fakeRejectScreen.classList.add("hidden");
+
+        document.body.style.opacity = "1";
+
+        noBtn.style.display = "none";
+
+        funnyMessage.textContent =
+            "Agora só resta uma opção...";
+
+    },1000);
+
+});
 /* =====================================================
    BOTÃO SIM
 ===================================================== */
